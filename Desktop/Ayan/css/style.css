@@ -1,0 +1,386 @@
+/* @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Raleway', Arial, sans-serif;
+} */
+
+/* body {
+  margin: 0;
+  padding: 0;
+  background-color: #555;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+} */
+
+@font-face {
+  font-family: "Bahij Janna";
+  src: url("../fonts/bahij-janna.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* font-family: "Montserrat", sans-serif; */
+  margin: 0;
+  padding: 0;
+  background-color: #555;
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  gap: 30px; /* Adds space between elements */
+}
+
+.navBar {
+  top: 10px;
+  position: absolute;
+  /* margin-bottom: 20px; */
+  /* margin-top: 20px; */
+  right: 10px;
+}
+navBar {
+  margin: 20px 0; /* Add vertical margin */
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+ul li {
+  position: relative;
+  list-style: none;
+  margin: 5px;
+}
+
+.anchorOfNav {
+  position: relative;
+  display: block;
+  height: 40px;
+  text-decoration: none;
+  padding: 5px 10px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  overflow: hidden;
+}
+
+ul li .anchorOfNav span {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  color: white;
+  font-size: 20px;
+  text-transform: capitalize;
+  transition-delay: 0.5s;
+}
+
+.anchorOfNav:hover span:nth-child(1) {
+  transform: translateY(-100%);
+  transition-delay: 0s;
+}
+
+.anchorOfNav:hover span:nth-child(2) {
+  transform: translateY(-100%);
+  transition-delay: 0s;
+}
+
+.anchorOfNav:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  border-radius: 10px;
+  background-color: #16a085;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.5s;
+}
+
+.anchorOfNav:hover:before {
+  transform: scaleX(1);
+  transform-origin: right;
+  transition-delay: 0.5s;
+}
+
+/*****************************PHOTO*****************************/
+
+.container {
+  position: relative;
+  width: 1300px;
+  height: 500px;
+  background-color: #222;
+}
+.container {
+  position: relative;
+  width: 1300px;
+  height: 500px;
+  background-color: #222;
+  margin: 20px 0; /* Add space around the container */
+  margin-top: 100px;
+}
+
+.clip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+
+.clip1 {
+  background: url(../photos/Amairu/amairu_left_final.jpeg);
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 17% 0, 49% 100%, 0% 100%);
+}
+
+.clip2 {
+  background: url(../photos/Ayan/home-section/image1.jpg);
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(13% 0, 81% 0, 59% 100%, 36% 100%);
+}
+
+.clip3 {
+  background: url(../photos/Ishan/ishan_right_final.jpeg);
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(79% 0, 100% 0, 100% 100%, 59% 100%);
+}
+
+.container:hover .clip {
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+
+.container .clip:hover {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/********************ABOUT US**************************/
+
+.about-container {
+  /* display: flex; */
+  align-items: center;
+  max-width: 1100px;
+  gap: 30px;
+  font-size: 18px;
+  background: #555;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(47, 45, 45, 0.1);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+/********************CARD*************************/
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
+  gap: 46px; /* Spacing between grid items */
+  margin-bottom: 20px;
+}
+
+.card {
+  position: relative;
+  width: 350px; /* Reduced width */
+  height: 220px; /* Reduced height */
+  display: flex;
+  align-items: center;
+  background: linear-gradient(45deg, #d41e31, #491f8f);
+  background: linear-gradient(45deg, #393535, #933a3a);
+  border-radius: 15px; /* Slightly smaller border radius */
+  margin-top: 15px; /* Reduce top margin */
+}
+
+.imgOfCard {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 280px; /* Reduce image size */
+  transition: 0.5s;
+}
+
+.card:hover img {
+  height: 320px; /* Reduce hover size */
+  left: 75%; /* Adjust position slightly */
+}
+
+.content {
+  position: relative;
+  width: 35%; /* Slightly smaller width */
+  left: 18%;
+  color: white;
+  text-transform: capitalize;
+  transition: 0.5s;
+  opacity: 0;
+  font-size: 14px; /* Reduce text size */
+}
+
+.card:hover .content {
+  left: 8%;
+  opacity: 1;
+}
+
+.h2OfCard {
+  font-size: 18px; /* Reduce heading size */
+  margin: 0;
+  padding: 0;
+  /* width: 220px; */
+  color: #b7f1f1;
+}
+
+.pOfCard {
+  position: relative;
+  font-size: 14px;
+  margin-bottom: 15px;
+  width: 220px;
+  z-index: 500;
+  color: #b7f1f1;
+}
+
+anchorOfCard {
+  position: relative;
+  display: inline-block;
+  color: #111;
+  padding: 4px 8px; /* Reduce button padding */
+  font-size: 12px; /* Reduce button text size */
+  background: white;
+  text-decoration: none;
+  border-radius: 8px; /* Slightly smaller border radius */
+}
+
+.anchorOfCardNew {
+  position: relative;
+  display: inline-block;
+  padding: 5px 5px;
+  color: #03e9f4;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.5s;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+  overflow: hidden;
+  text-align: center;
+  z-index: 5;
+  /* padding: 0; */
+}
+
+.anchorOfCardNew:hover {
+  background: #03e9f4;
+  color: #051130;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+    0 0 200px #03e9f4;
+}
+
+.anchorSpan1 {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: animate11 1s linear infinite;
+}
+
+@keyframes animate11 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.anchorSpan2 {
+  position: absolute;
+  display: block;
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: animate22 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes animate22 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.anchorSpan3 {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: animate33 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes animate33 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.anchorSpan4 {
+  position: absolute;
+  display: block;
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: animate44 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes animate44 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
